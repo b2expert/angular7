@@ -1,0 +1,21 @@
+<h2>Welcome to Begineer 2 Expert</h2>
+<p><b>Today</b> : {{today | date: 'dd-MMM-yyyy'}}</p>
+
+<ul>
+    <li [appNavRestrict]="'user, admin, supervisor'">Dashboard</li>
+    <li [appNavRestrict]="'admin'">Users</li>
+    <li [appNavRestrict]="'admin'">Employees</li>
+</ul>
+
+<br> 
+
+<div *ss="let image From sliderImageList; let ctrl = controller">
+    <a (click)="ctrl.next()">Next</a>
+    <main>
+        <img [src]="image.path | dImg:'test' : 'othervalue': '6474' " width="400" height="200" />
+    </main>
+    <a (click)="ctrl.prev()">Prev</a> 
+</div>
+
+<!-- <p *ngFor="let image of sliderImageList; let rowIndex = index"></p> -->
+<!-- <app-employee [appNavRestrict]="'admin'"></app-employee> -->

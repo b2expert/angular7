@@ -1,0 +1,15 @@
+<h2>{{deptName}} Employees</h2>
+<table>
+  <thead>
+    <tr>
+      <th>#SL</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of empService.empList; let rowIndex = index">
+      <td>{{rowIndex + 1}}</td>
+      <td>{{emp.Name}}</td>
+    </tr>
+  </tbody>
+</table>
